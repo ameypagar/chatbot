@@ -36,7 +36,7 @@ public class Chatbot {
                 } else {
                     String request = textLine;
                     if (MagicBooleans.trace_mode)
-                        System.out.println("STATE=" + request + ":THAT="  + ":TOPIC=" + chatSession.predicates.get("topic"));
+                        System.out.println("STATE:=" + request + ":THAT="  + ":TOPIC=" + chatSession.predicates.get("topic"));
                     String response = chatSession.multisentenceRespond(request);
                     while (response.contains("&lt;"))
                         response = response.replace("&lt;", "<");
